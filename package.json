@@ -2,14 +2,16 @@
 	"name": "nodejs-express-eta-mysql-template",
 	"version": "1.0.0",
 	"description": "Node.js, Express, Eta, MySQL - Basic Template",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
+		"start": "node backend/server.js",
+		"dev": "nodemon backend/server.js --watch backend --watch frontend/public --watch frontend/views --ext js,css,eta",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
 	"author": "WebDev175",
 	"license": "ISC",
-	"type": "commonjs",
+	"type": "module",
 	"dependencies": {
 		"dotenv": "^17.2.3",
 		"eta": "^4.4.1",

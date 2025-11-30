@@ -1,0 +1,7 @@
+<h1><%= it.title %></h1>
+
+<ul>
+	<% it.data.forEach(x => { %>
+	<li><%= x %></li>
+	<% }) %>
+</ul>

@@ -1,0 +1,2 @@
+<h1 class="error-title"><%= it.errorTitle %></h1>
+<h2 class="error-sub-title"><%= it.errorSubTitle %></h2>
