@@ -1,0 +1,39 @@
+# Node modules
+/node_modules/
+
+# Environment variables
+# .env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build outputs
+dist/
+build/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Eta cache (if used)
+.eta/
+
+# OS files (macOS / Windows)
+.DS_Store
+.DS_Store?
+Thumbs.db
+.AppleDouble
+.LSOverride
+.Trashes
+.Spotlight-V100/
+.fseventsd/
+.apdisk
+*.icloud
+Icon?
+._*
