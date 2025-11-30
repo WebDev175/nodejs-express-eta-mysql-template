@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><%= it.title %></title>
+		<link rel="stylesheet" href="/css/layout/main.css" />
+		<link rel="stylesheet" href="/css/layout/navbar.css" />
+		<link rel="stylesheet" href="/css/layout/footer.css" />
+		<link rel="stylesheet" href="/css/components/headers.css" />
+		<link rel="stylesheet" href="/css/components/buttons.css" />
+		<link rel="stylesheet" href="/css/components/lists.css" />
 	</head>
 	<body>
 		<%~ include("partials/navbar") %>
@@ -11,5 +17,7 @@
 		<main><%~ it.body %></main>
 
 		<%~ include("partials/footer") %>
+
+		<script src="/js/script.js"></script>
 	</body>
 </html>

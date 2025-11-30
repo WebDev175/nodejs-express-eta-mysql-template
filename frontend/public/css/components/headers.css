@@ -1,0 +1,17 @@
+h1 {
+	margin-bottom: 1em;
+}
+
+h2 {
+	margin-bottom: 1em;
+}
+
+.error-title {
+	text-align: center;
+	color: #df1f1f;
+}
+
+.error-sub-title {
+	text-align: center;
+	color: #af1f1f;
+}

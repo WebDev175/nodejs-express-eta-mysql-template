@@ -1,0 +1,39 @@
+nav {
+	width: 100%;
+	z-index: 1000;
+	background-color: #151515;
+	font-family: Arial, sans-serif;
+}
+
+ul.navbar-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.25em;
+	margin: 0 1em;
+	gap: 0.25em;
+}
+
+ul.navbar-list li {
+	min-width: 50px;
+	margin: 0 0.25em;
+	text-align: center;
+	font-size: 2em;
+	letter-spacing: -1px;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s ease;
+}
+
+ul.navbar-list li:hover {
+	border-bottom: 2px solid #afafaf;
+}
+
+ul.navbar-list li a {
+	padding: 0.25em 0.5em;
+	display: block;
+	transition: color 0.3s ease;
+}
+
+ul.navbar-list li a:hover {
+	color: #bfbfbf;
+}

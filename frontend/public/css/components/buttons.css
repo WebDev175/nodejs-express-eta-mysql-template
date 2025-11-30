@@ -1,0 +1,15 @@
+a,
+a:visited,
+a:hover,
+a:active {
+	color: inherit;
+	font-family: inherit;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
