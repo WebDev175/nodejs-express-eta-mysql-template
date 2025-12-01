@@ -28,13 +28,16 @@ app.set("views", viewsDir);
 
 app.get("/", async (req, res) => {
 	try {
-		const [rows] = await pool.execute("SELECT NOW() AS now");
-		const data = [rows[0].now];
-		res.render("home/index", { title: "Home Page", data });
+		const query = `SELECT co.country_name, rg.region_name
+			FROM countries AS co
+			JOIN regions AS rg ON co.region_id = rg.id
+			ORDER BY rg.region_name ASC, co.country_name DESC;`;
+		const [rows] = await pool.execute(query);
+		res.render("home/index", { title: "Home Page", countries: rows });
 	} catch (err) {
 		console.error(err);
 		return renderError(res, 500, "Database error", "Please try again later");
-		//next(error); // triggers global error handler
+		// next(error); // triggers global Express error handler
 	}
 });
 

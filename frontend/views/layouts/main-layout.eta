@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="/css/layout/navbar.css" />
 		<link rel="stylesheet" href="/css/layout/footer.css" />
 		<link rel="stylesheet" href="/css/components/headers.css" />
+		<link rel="stylesheet" href="/css/components/tables.css" />
 		<link rel="stylesheet" href="/css/components/buttons.css" />
 		<link rel="stylesheet" href="/css/components/lists.css" />
 	</head>

@@ -1,0 +1,33 @@
+table {
+	width: 500px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+thead {
+	color: #fff;
+	font-size: 1.5em;
+	border-bottom: 1px solid #3a3a3a;
+}
+
+thead th {
+	padding: 12px 15px;
+	text-align: left;
+	font-weight: bold;
+}
+
+tbody tr {
+	border-bottom: 1px solid #2e2e2e;
+	transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+}
+
+tbody td {
+	padding: 1em;
+}
+
+tbody tr:nth-child(even) {
+}

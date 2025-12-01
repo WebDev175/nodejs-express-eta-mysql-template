@@ -3,6 +3,7 @@ import path from "path";
 
 const eta = new Eta({
 	views: path.join(process.cwd(), "frontend", "views"),
+	cache: false,
 });
 
 /**
@@ -21,7 +22,6 @@ export function buildEtaEngine() {
 					...opts,
 					body: inner,
 				});
-
 				callback(null, renderedTemplate);
 			} catch (error) {
 				callback(error);

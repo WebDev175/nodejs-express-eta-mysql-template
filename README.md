@@ -16,12 +16,14 @@ npm install --save-dev nodemon
 
 ```bash
 # Production
-# Add new command in script section in package.json file:
+# Add new command in the script section in package.json file:
 # "start": "node backend/server.js"
 npm run start
+```
 
+```bash
 # Development
-# Add new command in script section in package.json file:
+# Add new command in the script section in package.json file:
 # "dev": "nodemon backend/server.js --watch backend --watch frontend/public --watch frontend/views --ext js,css,eta",
 npm run dev
 ```
