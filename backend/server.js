@@ -5,6 +5,9 @@ import dotenv from "dotenv";
 import pool from "./database/database.js";
 import { buildEtaEngine } from "./settings/eta-config.js";
 import { renderError } from "./utils/render-error.js";
+// Custom Routes
+import countryRoutes from "./routes/country.routes.js";
+import { error } from "console";
 
 // Environment variables configuration from '.env' file.
 dotenv.config();
@@ -26,29 +29,19 @@ app.engine("eta", buildEtaEngine());
 app.set("view engine", "eta");
 app.set("views", viewsDir);
 
-app.get("/", async (req, res) => {
-	try {
-		const query = `SELECT co.country_name, rg.region_name
-			FROM countries AS co
-			JOIN regions AS rg ON co.region_id = rg.id
-			ORDER BY rg.region_name ASC, co.country_name DESC;`;
-		const [rows] = await pool.execute(query);
-		res.render("home/index", { title: "Home Page", countries: rows });
-	} catch (err) {
-		console.error(err);
-		return renderError(res, 500, "Database error", "Please try again later");
-		// next(error); // triggers global Express error handler
-	}
+app.use("/countries", countryRoutes);
+
+app.get("/", (req, res) => {
+	res.render("home/index", { title: "Home Page" });
 });
 
 // Express error handlers
 app.use((req, res) => {
-	renderError(res, 404, "Page Not Found", "The page you requested does not exist");
+	renderError(res, 404, null, "Page Not Found", "The page you requested does not exist");
 });
 
 app.use((err, req, res, next) => {
-	console.error(err.stack);
-	renderError(res, 500, "Internal Server Error", "Please try again later");
+	renderError(res, 500, err, "Internal Server Error", "Please try again later");
 });
 
 app.listen(PORT, HOST, () => {

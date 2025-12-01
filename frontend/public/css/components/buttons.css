@@ -13,3 +13,13 @@ a:focus {
 	text-decoration: none;
 	outline: none;
 }
+
+a.basic-link {
+	color: #4355ea;
+	text-decoration: underline;
+}
+
+a.basic-link:hover {
+	color: #4344ff;
+	text-decoration: underline;
+}

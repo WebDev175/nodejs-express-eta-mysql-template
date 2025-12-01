@@ -22,12 +22,6 @@ tbody tr {
 	transition: background-color 0.2s;
 }
 
-tbody tr:hover {
-}
-
 tbody td {
 	padding: 1em;
-}
-
-tbody tr:nth-child(even) {
 }

@@ -1,0 +1,8 @@
+<h1><%= it.country.country_name %></h1>
+
+<ul>
+	<li>Country: <%= it.country.country_name %></li>
+	<li>Region: <%= it.country.region_name %></li>
+</ul>
+
+<a href="/countries" class="basic-link">Back to list</a>
