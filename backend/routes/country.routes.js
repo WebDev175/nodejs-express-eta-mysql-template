@@ -1,6 +1,7 @@
 import express from "express";
-import { getAllCountries, getCountryByName } from "../services/country.service.js";
 import { renderError } from "../utils/render-error.js";
+
+import { getAllCountries, getCountryByName, getTouristSitesByCountryId } from "../services/country.service.js";
 
 const router = express.Router();
 
@@ -22,7 +23,12 @@ router.get("/:name", async (req, res) => {
 		if (!country) {
 			return renderError(res, 404, null, "Not Found", `Country '${name}' not found`);
 		}
-		res.render("countries/details", { title: country.country_name, country });
+		const touristSites = await getTouristSitesByCountryId(country.id);
+		res.render("countries/details", {
+			title: country.country_name,
+			country,
+			touristSites,
+		});
 	} catch (err) {
 		renderError(res, 500, err, "Database Error", "Failed to load country details");
 	}

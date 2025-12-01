@@ -7,7 +7,6 @@ import { buildEtaEngine } from "./settings/eta-config.js";
 import { renderError } from "./utils/render-error.js";
 // Custom Routes
 import countryRoutes from "./routes/country.routes.js";
-import { error } from "console";
 
 // Environment variables configuration from '.env' file.
 dotenv.config();

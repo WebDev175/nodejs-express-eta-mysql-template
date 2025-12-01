@@ -1,3 +1,7 @@
+.table-wrapper {
+	min-height: 200px;
+}
+
 table {
 	width: 500px;
 	margin: 0 auto;
@@ -23,5 +27,5 @@ tbody tr {
 }
 
 tbody td {
-	padding: 1em;
+	padding: 0.5em;
 }

@@ -17,9 +17,13 @@ main {
 	width: 700px;
 	min-height: 100vh;
 	margin: 0 auto;
-	padding-top: 5em;
+	padding: 8em 2em 4em 2em;
 }
 
 p {
 	margin-bottom: 0.5em;
+}
+
+hr {
+	margin-bottom: 2em;
 }

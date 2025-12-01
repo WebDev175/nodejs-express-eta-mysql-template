@@ -1,4 +1,4 @@
--- ~~~~~~~~~~~~~~~~~~~~ Travel Database Data Seed ~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~~~~~~~~~~~~~~~~~~~ Travel Database Data Seed (Refactored, Escaped) ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -- Insert regions
 INSERT INTO regions (region_name) VALUES 
@@ -35,9 +35,9 @@ INSERT INTO location_types (type_name) VALUES
 -- China Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Beijing', 1, 1),
-('Great Wall of China', 1, 3),
+('Great Wall of China', 1, 2),
 ('Zhangjiajie', 1, 2),
-('Terracotta Army', 1, 3),
+('Xi''an', 1, 1),
 ('Li River', 1, 2);
 
 -- China Tourist Sites
@@ -57,86 +57,85 @@ INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
 ('Tianmen Cave', 'Natural arch reached by 999-step staircase, offering breathtaking views.', 3),
 ('Glass Skywalk', 'A 60-meter-long transparent walkway clinging to the cliffside of Tianmen Mountain.', 3);
 
--- Terracotta Army
+-- Xi'an
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Pit 1', 'Largest pit of over 6,000 life-sized terracotta soldiers representing Qin Dynasty army.', 4);
+('Terracotta Army', 'Largest pit of over 6,000 life-sized terracotta soldiers representing Qin Dynasty army.', 4);
 
 -- Li River
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Li River Cruise', 'Scenic river cruise offering views of limestone karst peaks, traditional villages, and lush countryside.', 30),
-('Yangshuo Town', 'Picturesque town along the Li River, popular for biking, rock climbing, and cultural experiences.', 30);
+('Li River Cruise', 'Scenic river cruise offering views of limestone karst peaks, traditional villages, and lush countryside.', 5),
+('Yangshuo Town', 'Picturesque town along the Li River, popular for biking, rock climbing, and cultural experiences.', 5);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JAPAN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Japan Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Tokyo', 2, 1),
 ('Mount Fuji', 2, 2),
-('Kyoto Temples', 2, 3),
-('Nikko', 2, 3),
+('Kyoto', 2, 1),
+('Nikko', 2, 1),
 ('Hokkaido', 2, 2);
 
 -- Japan Tourist Sites
 -- Tokyo
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Shibuya Crossing', 'Famous busy intersection known worldwide for its neon lights and crowds.', 5),
-('Meiji Shrine', 'Shinto shrine dedicated to Emperor Meiji, surrounded by peaceful forest.', 5);
+('Shibuya Crossing', 'Famous busy intersection known worldwide for its neon lights and crowds.', 6),
+('Meiji Shrine', 'Shinto shrine dedicated to Emperor Meiji, surrounded by peaceful forest.', 6);
 
 -- Mount Fuji
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Fuji Climbing Routes', 'Multiple trails leading to the summit of Japan''s iconic mountain.', 6);
+('Fuji Climbing Routes', 'Multiple trails leading to the summit of Japan''s iconic mountain.', 7);
 
--- Kyoto Temples
+-- Kyoto
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Kinkaku-ji', 'The Golden Pavilion, a Zen Buddhist temple famous for its stunning golden exterior.', 7),
-('Fushimi Inari', 'Iconic shrine with thousands of red torii gates leading up the mountain.', 7);
+('Kinkaku-ji', 'The Golden Pavilion, a Zen Buddhist temple famous for its stunning golden exterior.', 8),
+('Fushimi Inari', 'Iconic shrine with thousands of red torii gates leading up the mountain.', 8);
 
 -- Nikko
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Toshogu Shrine', 'Lavish Shinto shrine with ornate carvings, dedicated to Tokugawa Ieyasu, set in lush forested hills.', 31);
+('Toshogu Shrine', 'Lavish Shinto shrine with ornate carvings, dedicated to Tokugawa Ieyasu, set in lush forested hills.', 9);
 
 -- Hokkaido
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Shiretoko National Park', 'UNESCO World Heritage site featuring mountains, waterfalls, wildlife, and pristine natural landscapes.', 32),
-('Furano Flower Fields', 'Seasonal flower fields famous for colorful lavender and other blooms, attracting photographers and tourists.', 32);
+('Shiretoko National Park', 'UNESCO World Heritage site featuring mountains, waterfalls, wildlife, and pristine natural landscapes.', 10),
+('Furano Flower Fields', 'Seasonal flower fields famous for colorful lavender and other blooms, attracting photographers and tourists.', 10);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ THAILAND ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Thailand Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Bangkok', 3, 1),
 ('Phi Phi Islands', 3, 5),
-('Ayutthaya Historical Park', 3, 3),
+('Ayutthaya', 3, 1),
 ('Chiang Mai', 3, 1),
 ('Similan Islands', 3, 5);
 
 -- Thailand Tourist Sites
 -- Bangkok
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Grand Palace', 'Lavish complex of buildings housing the Thai king and royal ceremonies.', 8),
-('Wat Arun', 'Temple of Dawn with a central prang decorated in colorful porcelain.', 8);
+('Grand Palace', 'Lavish complex of buildings housing the Thai king and royal ceremonies.', 11),
+('Wat Arun', 'Temple of Dawn with a central prang decorated in colorful porcelain.', 11);
 
 -- Phi Phi Islands
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Maya Bay', 'Famous beach with clear waters, cliffs, and diverse marine life.', 9);
+('Maya Bay', 'Famous beach with clear waters, cliffs, and diverse marine life.', 12);
 
--- Ayutthaya Historical Park
+-- Ayutthaya
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Wat Mahathat', 'Historic temple ruins famous for Buddha head entwined in tree roots.', 10);
+('Wat Mahathat', 'Historic temple ruins famous for Buddha head entwined in tree roots.', 13);
 
 -- Chiang Mai
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Doi Suthep Temple', 'Historic temple on a mountain overlooking Chiang Mai, featuring a golden chedi and panoramic city views.', 33),
-('Chiang Mai Night Bazaar', 'Vibrant market with handicrafts, local food, and cultural performances.', 33);
+('Doi Suthep Temple', 'Historic temple on a mountain overlooking Chiang Mai, featuring a golden chedi and panoramic city views.', 14),
+('Chiang Mai Night Bazaar', 'Vibrant market with handicrafts, local food, and cultural performances.', 14);
 
 -- Similan Islands
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Scuba Diving Spots', 'World-class diving locations with coral reefs, tropical fish, and crystal-clear waters.', 34),
-('Sailing and Beaches', 'Pristine white sand beaches ideal for sunbathing, swimming, and island hopping.', 34);
+('Scuba Diving Spots', 'World-class diving locations with coral reefs, tropical fish, and crystal-clear waters.', 15),
+('Sailing and Beaches', 'Pristine white sand beaches ideal for sunbathing, swimming, and island hopping.', 15);
 
--- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ITALY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ITALY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Italy Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Rome', 4, 1),
-('Colosseum', 4, 3),
 ('Venice', 4, 1),
 ('Dolomites', 4, 2),
 ('Florence', 4, 1);
@@ -144,61 +143,54 @@ INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 -- Italy Tourist Sites
 -- Rome
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Pantheon', 'Ancient Roman temple with a massive dome, now a church.', 11);
-
--- Colosseum
-INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Colosseum Arena', 'Iconic Roman amphitheater used for gladiatorial combat and public events.', 12);
+('Pantheon', 'Ancient Roman temple with a massive dome, now a church.', 16),
+('Colosseum', 'Iconic Roman amphitheater used for gladiatorial combat and public events.', 16);
 
 -- Venice
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('St Mark''s Basilica', 'Byzantine-style cathedral in the heart of Venice with stunning mosaics.', 13);
+('St Mark''s Basilica', 'Byzantine-style cathedral in the heart of Venice with stunning mosaics.', 17);
 
 -- Dolomites
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Tre Cime di Lavaredo', 'Three prominent peaks with hiking trails and panoramic views.', 14);
+('Tre Cime di Lavaredo', 'Three prominent peaks with hiking trails and panoramic views.', 18);
 
 -- Florence
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Uffizi Gallery', 'Famous art museum housing Renaissance masterpieces by Michelangelo, Leonardo da Vinci, and Botticelli.', 35),
-('Duomo Cathedral', 'Stunning cathedral with a red-tiled dome and intricate Renaissance architecture.', 35);
+('Uffizi Gallery', 'Famous art museum housing Renaissance masterpieces by Michelangelo, Leonardo da Vinci, and Botticelli.', 19),
+('Duomo Cathedral', 'Stunning cathedral with a red-tiled dome and intricate Renaissance architecture.', 19);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FRANCE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- France Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Paris', 5, 1),
-('Eiffel Tower', 5, 3),
+('Versailles', 5, 1),
 ('French Riviera', 5, 5),
-('Versailles', 5, 3),
 ('Loire Valley', 5, 2);
 
 -- France Tourist Sites
 -- Paris
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Louvre Museum', 'World-renowned museum housing the Mona Lisa and thousands of artworks.', 15);
-
--- Eiffel Tower
-INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Eiffel Tower Summit', 'Famous wrought-iron tower offering panoramic views of Paris.', 16);
-
--- French Riviera
-INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Nice Beach', 'Mediterranean beaches with turquoise waters and scenic promenades.', 17);
+('Louvre Museum', 'World-renowned museum housing the Mona Lisa and thousands of artworks.', 20),
+('Eiffel Tower', 'Famous wrought-iron tower offering panoramic views of Paris.', 20);
 
 -- Versailles
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Palace of Versailles', 'Opulent royal palace with magnificent gardens, Hall of Mirrors, and rich history of French monarchy.', 36);
+('Palace of Versailles', 'Opulent royal palace with magnificent gardens, Hall of Mirrors, and rich history of French monarchy.', 21);
+
+-- French Riviera
+INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
+('Nice Beach', 'Mediterranean beaches with turquoise waters and scenic promenades.', 22);
 
 -- Loire Valley
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Château de Chambord', 'Largest chateau in the Loire Valley with Renaissance architecture and extensive gardens.', 37),
-('Vineyard Tours', 'Tours of famous wine-producing estates with tastings and picturesque landscapes.', 37);
+('Château de Chambord', 'Largest chateau in the Loire Valley with Renaissance architecture and extensive gardens.', 23),
+('Vineyard Tours', 'Tours of famous wine-producing estates with tastings and picturesque landscapes.', 23);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GERMANY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Germany Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Berlin', 6, 1),
-('Neuschwanstein Castle', 6, 3),
+('Neuschwanstein Castle', 6, 2),
 ('Black Forest', 6, 2),
 ('Hamburg', 6, 1),
 ('Rhine Valley', 6, 2);
@@ -206,24 +198,24 @@ INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 -- Germany Tourist Sites
 -- Berlin
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Brandenburg Gate', 'Neoclassical monument symbolizing Germany''s reunification.', 18);
+('Brandenburg Gate', 'Neoclassical monument symbolizing Germany''s reunification.', 24);
 
 -- Neuschwanstein Castle
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Neuschwanstein Castle Tour', 'Fairy-tale 19th-century castle in Bavaria with elaborate interiors.', 19);
+('Neuschwanstein Castle Tour', 'Fairy-tale 19th-century castle in Bavaria with elaborate interiors.', 25);
 
 -- Black Forest
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Triberg Waterfalls', 'Scenic waterfalls in the dense Black Forest region.', 20);
+('Triberg Waterfalls', 'Scenic waterfalls in the dense Black Forest region.', 26);
 
 -- Hamburg
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Miniatur Wunderland', 'Largest model railway in the world with intricate miniature cities and landscapes.', 38),
-('Port of Hamburg', 'Historic harbor with tours, restaurants, and waterfront attractions.', 38);
+('Miniatur Wunderland', 'Largest model railway in the world with intricate miniature cities and landscapes.', 27),
+('Port of Hamburg', 'Historic harbor with tours, restaurants, and waterfront attractions.', 27);
 
 -- Rhine Valley
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Rhine River Cruises', 'Scenic river cruises past castles, vineyards, and quaint medieval towns.', 39);
+('Rhine River Cruises', 'Scenic river cruises past castles, vineyards, and quaint medieval towns.', 28);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ USA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- USA Locations
@@ -237,25 +229,25 @@ INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 -- USA Tourist Sites
 -- New York City
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Statue of Liberty', 'Iconic symbol of freedom on Liberty Island in New York Harbor.', 21),
-('Central Park', 'Urban park with trails, lakes, and cultural landmarks in Manhattan.', 21);
+('Statue of Liberty', 'Iconic symbol of freedom on Liberty Island in New York Harbor.', 29),
+('Central Park', 'Urban park with trails, lakes, and cultural landmarks in Manhattan.', 29);
 
 -- Grand Canyon
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('South Rim', 'Most visited area of the canyon, with scenic viewpoints and hiking trails.', 22);
+('South Rim', 'Most visited area of the canyon, with scenic viewpoints and hiking trails.', 30);
 
 -- Yellowstone National Park
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Old Faithful', 'Famous geyser erupting at regular intervals, attracting thousands of visitors.', 23);
+('Old Faithful', 'Famous geyser erupting at regular intervals, attracting thousands of visitors.', 31);
 
 -- Washington D.C.
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('National Mall', 'Open-area park featuring monuments, museums, and memorials, including the Lincoln Memorial.', 24);
+('National Mall', 'Open-area park featuring monuments, museums, and memorials, including the Lincoln Memorial.', 32);
 
 -- San Francisco
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Golden Gate Bridge', 'Iconic suspension bridge offering panoramic views and pedestrian walkways.', 40),
-('Alcatraz Island', 'Historic prison island with guided tours and rich history of incarceration.', 40);
+('Golden Gate Bridge', 'Iconic suspension bridge offering panoramic views and pedestrian walkways.', 33),
+('Alcatraz Island', 'Historic prison island with guided tours and rich history of incarceration.', 33);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CANADA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Canada Locations
@@ -269,31 +261,31 @@ INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 -- Canada Tourist Sites
 -- Toronto
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('CN Tower', 'One of the tallest towers in the world, offering panoramic city views.', 24);
+('CN Tower', 'One of the tallest towers in the world, offering panoramic city views.', 34);
 
 -- Niagara Falls
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Horseshoe Falls', 'Powerful waterfall straddling the Canada-US border, known for breathtaking views.', 25);
+('Horseshoe Falls', 'Powerful waterfall straddling the Canada-US border, known for breathtaking views.', 35);
 
 -- Banff National Park
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Lake Louise', 'Turquoise glacier-fed lake surrounded by mountain peaks and forests.', 26);
+('Lake Louise', 'Turquoise glacier-fed lake surrounded by mountain peaks and forests.', 36);
 
 -- Vancouver
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Stanley Park', 'Urban park with scenic seawall paths, gardens, and totem poles.', 41),
-('Capilano Suspension Bridge', 'Historic suspension bridge surrounded by lush rainforest and treetop walks.', 41);
+('Stanley Park', 'Urban park with scenic seawall paths, gardens, and totem poles.', 37),
+('Capilano Suspension Bridge', 'Historic suspension bridge surrounded by lush rainforest and treetop walks.', 37);
 
 -- Quebec City
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Old Quebec', 'UNESCO World Heritage site with cobblestone streets, fortifications, and historic architecture.', 42),
-('Montmorency Falls', 'Tall waterfall located just outside the city, accessible by cable car and hiking trails.', 42);
+('Old Quebec', 'UNESCO World Heritage site with cobblestone streets, fortifications, and historic architecture.', 38),
+('Montmorency Falls', 'Tall waterfall located just outside the city, accessible by cable car and hiking trails.', 38);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MEXICO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- Mexico Locations
 INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 ('Mexico City', 9, 1),
-('Chichen Itza', 9, 3),
+('Chichen Itza', 9, 2),
 ('Cancun', 9, 5),
 ('Oaxaca', 9, 1),
 ('Tulum', 9, 5);
@@ -301,22 +293,22 @@ INSERT INTO locations (location_name, country_id, location_type_id) VALUES
 -- Mexico Tourist Sites
 -- Mexico City
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Zocalo', 'Main square surrounded by historic buildings, cathedral, and government palace.', 27);
+('Zocalo', 'Main square surrounded by historic buildings, cathedral, and government palace.', 39);
 
 -- Chichen Itza
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('El Castillo', 'Step pyramid and major Mayan archaeological site, featuring precise astronomical alignments.', 28);
+('El Castillo', 'Step pyramid and major Mayan archaeological site, featuring precise astronomical alignments.', 40);
 
 -- Cancun
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Playa Delfines', 'Public beach with white sand, turquoise waters, and scenic viewpoints.', 29);
+('Playa Delfines', 'Public beach with white sand, turquoise waters, and scenic viewpoints.', 41);
 
 -- Oaxaca
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Monte Alban', 'Ancient Zapotec archaeological site with pyramids and ceremonial plazas overlooking valleys.', 43),
-('Oaxaca Markets', 'Vibrant markets featuring traditional crafts, textiles, and local cuisine.', 43);
+('Monte Alban', 'Ancient Zapotec archaeological site with pyramids and ceremonial plazas overlooking valleys.', 42),
+('Oaxaca Markets', 'Vibrant markets featuring traditional crafts, textiles, and local cuisine.', 42);
 
 -- Tulum
 INSERT INTO tourist_sites (site_name, site_description, location_id) VALUES
-('Tulum Ruins', 'Cliffside Mayan ruins with stunning views of the Caribbean Sea.', 44),
-('Tulum Beaches', 'White sandy beaches with crystal-clear waters, perfect for swimming and relaxation.', 44);
+('Tulum Ruins', 'Cliffside Mayan ruins with stunning views of the Caribbean Sea.', 43),
+('Tulum Beaches', 'White sandy beaches with crystal-clear waters, perfect for swimming and relaxation.', 43);

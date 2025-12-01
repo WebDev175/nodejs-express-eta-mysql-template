@@ -1,8 +1,17 @@
-<h1><%= it.country.country_name %></h1>
+<% const touristSites = Array.isArray(it.touristSites) ? it.touristSites : []; %>
 
-<ul>
-	<li>Country: <%= it.country.country_name %></li>
-	<li>Region: <%= it.country.region_name %></li>
-</ul>
+<h1><%= `${it.country.country_name} (${it.country.region_name})` %></h1>
+<h2>Tourist Sites</h2>
+<hr />
 
-<a href="/countries" class="basic-link">Back to list</a>
+<% touristSites.forEach((t, count) => { %>
+<div class="tourist-sites-details">
+	<h3><span class="counter"><%= count+1 %>. </span><%= t.site_name %></h3>
+	<h4><%= `Located in "${t.location_name}" (${t.type_name}).` %></h4>
+	<p><%= t.site_description %></p>
+</div>
+<% }) %>
+
+<div>
+	<a href="/countries" class="basic-link">Back to list</a>
+</div>

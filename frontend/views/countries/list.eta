@@ -1,24 +1,16 @@
 <h1>Countries</h1>
 <% const countries = Array.isArray(it.countries) ? it.countries : []; %>
-<table>
-	<thead>
-		<tr>
-			<th>Region</th>
-			<th>Country</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% countries.forEach(c => { %>
-		<tr>
-			<td><%= c.region_name %></td>
-			<td>
-				<a href="/countries/<%= c.country_name.toLowerCase() %>"><%= c.country_name %></a>
-			</td>
-		</tr>
-		<% }) %> <% if (countries.length === 0) { %>
-		<tr>
-			<td colspan="2">No countries found.</td>
-		</tr>
-		<% } %>
-	</tbody>
-</table>
+
+<ul class="countries-list">
+	<% countries.forEach(c => { %>
+	<li>
+		<a
+			href="/countries/<%= c.country_name.toLowerCase() %>"
+			class="country-link"
+			title="<%= `${c.country_name} (${c.region_name})` %>"
+		>
+			<%= c.country_name %>
+		</a>
+	</li>
+	<% });%>
+</ul>
