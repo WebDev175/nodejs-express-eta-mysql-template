@@ -1,16 +1,31 @@
-# Node.js, Express Framework, Eta Template Engine, MySQL Database - Basic Template.
+# Basic Node.js Template with Express, Eta, and MySQL
 
-## Basic Project Diagram
+### Basic Project Diagram
 
 <p align="center">
   <img src="docs/images/project-diagram.png" alt="Project Diagram" width="500">
 </p>
 
-## Basic ERD Diagram (Entity Relationship Diagram)
+### The Template Engine (Eta)
+
+-   Eta is an embedded JavaScript template engine.
+-   [Eta](https://eta.js.org/) is an alternative to [EJS](https://ejs.co/).
+-   This project uses Eta for server-side rendering (SSR) with the Express framework.
+
+---
+
+### Basic ERD Diagram (Entity Relationship Diagram)
 
 <p align="center">
-    <img src="docs/images/database-erd.png" width="500">
+    <img src="docs/images/database-erd.png" alt="Database ERD" width="500">
 </p>
+
+### The Database
+
+-   [MySQL](https://www.mysql.com/products/community/) is an open-source relational database.
+-   This project uses `mysql2/promise` for easy async database access with Node.js/Express.
+
+---
 
 ## Project Setup
 
@@ -24,7 +39,7 @@ npm install express eta dotenv mysql2
 npm install --save-dev nodemon
 ```
 
-## Run the project in the terminal
+### Run the project in the terminal
 
 ```bash
 # Production:
