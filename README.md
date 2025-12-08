@@ -22,7 +22,7 @@
 
 ### The Database
 
--   [MySQL](https://www.mysql.com/products/community/) is an open-source relational database.
+-   [MySQL Community](https://www.mysql.com/products/community/) is an open-source relational database.
 -   This project uses `mysql2/promise` for easy async database access with Node.js/Express.
 
 ---
