@@ -6,6 +6,7 @@
 		<title><%= it.title %></title>
 		<link rel="stylesheet" href="/css/layout/main.css" />
 		<link rel="stylesheet" href="/css/layout/navbar.css" />
+		<link rel="stylesheet" href="/css/layout/sidebar.css" />
 		<link rel="stylesheet" href="/css/layout/footer.css" />
 		<link rel="stylesheet" href="/css/components/headers.css" />
 		<link rel="stylesheet" href="/css/components/tables.css" />
@@ -15,6 +16,10 @@
 	</head>
 	<body>
 		<%~ include("partials/navbar") %>
+
+		<span></span>
+
+		<%~ include("partials/sidebar", it) %>
 
 		<main><%~ it.body %></main>
 

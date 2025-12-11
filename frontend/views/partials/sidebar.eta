@@ -1,0 +1,13 @@
+<aside class="sidebar">
+	<h2>Countries</h2>
+
+	<% const countries = Array.isArray(it.countries) ? it.countries : []; %>
+
+	<ul class="sidebar-list">
+		<% countries.forEach(c => { %>
+		<li>
+			<a href="/countries/<%= c.country_name.toLowerCase() %>"> <%= c.country_name %> </a>
+		</li>
+		<% }); %>
+	</ul>
+</aside>

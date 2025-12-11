@@ -1,5 +1,5 @@
 <nav>
-	<ul class="navbar-list">
+	<ul>
 		<li><a href="/">Home</a></li>
 		<li><a href="/countries">Countries</a></li>
 	</ul>
