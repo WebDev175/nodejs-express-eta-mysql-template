@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import pool from "./database/database.js";
 import { buildEtaEngine } from "./settings/eta-config.js";
 import { renderError } from "./utils/render-error.js";
+import { loadCountries } from "./middleware/load-countries.js";
 // Custom Routes
 import countryRoutes from "./routes/country.routes.js";
 
@@ -28,8 +29,13 @@ app.engine("eta", buildEtaEngine());
 app.set("view engine", "eta");
 app.set("views", viewsDir);
 
+// Load countries from cache for sidebar menu
+app.use(loadCountries);
+
+// Countries routes
 app.use("/countries", countryRoutes);
 
+// Home page route
 app.get("/", (req, res) => {
 	res.render("home/index", { title: "Home Page" });
 });
@@ -43,6 +49,7 @@ app.use((err, req, res, next) => {
 	renderError(res, 500, err, "Internal Server Error", "Please try again later");
 });
 
+// Run the app on a host
 app.listen(PORT, HOST, () => {
 	console.log(`Server running on ${HOST}:${PORT}`);
 });

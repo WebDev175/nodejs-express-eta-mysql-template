@@ -3,7 +3,7 @@
 ### Basic Project Diagram
 
 <p align="center">
-  <img src="docs/images/project-diagram.png" alt="Project Diagram" width="500">
+  <img src="docs/images/project-diagram.png" alt="Project Diagram" width="">
 </p>
 
 ### The Template Engine (Eta)
@@ -17,7 +17,7 @@
 ### Basic ERD Diagram (Entity Relationship Diagram)
 
 <p align="center">
-    <img src="docs/images/database-erd.png" alt="Database ERD" width="500">
+    <img src="docs/images/database-erd.png" alt="Database ERD" width="">
 </p>
 
 ### The Database
